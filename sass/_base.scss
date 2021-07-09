@@ -1,0 +1,27 @@
+/**** FONTS ****/
+$color-white: #fff; 
+
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 1rem 10/16
+}
+
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    font-family: 'Roboto', 'Arial', sans-serif;
+    font-weight: 400;
+    color: $color-white;
+}
