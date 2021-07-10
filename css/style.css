@@ -1,0 +1,117 @@
+/**** FONTS ****/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-weight: 400;
+  color: #fff; }
+
+.navbar {
+  background-color: #222222;
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  width: 100%; }
+  .navbar__list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    padding: 3rem 0; }
+    .navbar__list a {
+      text-decoration: none;
+      color: inherit;
+      display: inline-block; }
+  .navbar__logo {
+    position: absolute;
+    width: 15rem;
+    height: 15rem;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .navbar__heading {
+    position: absolute;
+    width: 15rem;
+    height: 15rem;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+
+.box {
+  background-image: linear-gradient(rgba(255, 0, 0, 0.9), rgba(255, 0, 0, 0.9));
+  clip-path: polygon(50% 0%, 83% 0, 100% 0, 100% 70%, 50% 100%, 0% 70%, 0 0, 11% 0);
+  position: absolute;
+  width: 15rem;
+  height: 15rem;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.header__textbox {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  width: 40%; }
+
+.header__small {
+  font-weight: 300;
+  font-size: 1.4rem; }
+
+.header__big {
+  margin: 1.5rem 0;
+  text-transform: uppercase; }
+
+.header__img {
+  position: absolute;
+  bottom: 0;
+  right: 7rem;
+  height: 47rem;
+  width: auto; }
+
+.header__paragraph {
+  margin-bottom: 1.5rem; }
+
+.btn {
+  padding: 1.2rem 3rem;
+  border-radius: 100px;
+  border: none;
+  margin-right: 2rem; }
+  .btn-full {
+    background-color: #e67e22;
+    color: #fff;
+    border: 2px solid transparent;
+    transition: all .2s; }
+    .btn-full:hover {
+      color: #fff;
+      background-color: #cf6d17; }
+  .btn-ghost {
+    background-color: #fff;
+    border: 2px solid #e67e22;
+    color: #e67e22;
+    transition: all .2s; }
+    .btn-ghost:hover {
+      background-color: #e67e22;
+      color: #fff;
+      border: 2px solid #fff; }
+  .btn:focus {
+    outline: none; }
+
+.header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/b-4.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  position: relative; }

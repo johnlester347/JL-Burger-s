@@ -1,0 +1,134 @@
+.navbar {
+  background-color: #222222;
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  width: 100%;
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    padding: 3rem 0;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      display: inline-block;
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    width: 15rem;
+    height: 15rem;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__heading {
+    position: absolute;
+    width: 15rem;
+    height: 15rem;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+}
+
+.box {
+  background-image: linear-gradient(
+    rgba(rgb(255, 0, 0), 0.9),
+    rgba(rgb(255, 0, 0), 0.9)
+  );
+  clip-path: polygon(
+    50% 0%,
+    83% 0,
+    100% 0,
+    100% 70%,
+    50% 100%,
+    0% 70%,
+    0 0,
+    11% 0
+  );
+
+  position: absolute;
+  width: 15rem;
+  height: 15rem;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header__textbox {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+}
+
+.header {
+  
+
+  &__small {
+    font-weight: 300;
+    font-size: 1.4rem;
+  }
+
+  &__big {
+    margin: 1.5rem 0;
+    text-transform: uppercase;
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 0;
+    right: 7rem;
+    height: 47rem;
+    width: auto;
+  }
+
+  &__paragraph {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.btn {
+  padding: 1.2rem 3rem;
+  border-radius: 100px;
+  border: none;
+  margin-right: 2rem;
+
+  &-full {
+    background-color: #e67e22;
+    color: $color-white;
+    border: 2px solid transparent;
+    transition: all .2s;
+
+    &:hover {
+      color: $color-white;
+      background-color: #cf6d17;
+    }
+  }
+
+  &-ghost {
+    background-color: $color-white;
+    border: 2px solid #e67e22;
+    color: #e67e22;
+    transition: all .2s;
+
+    &:hover {
+      background-color: #e67e22;
+      color: $color-white;
+      border: 2px solid $color-white;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
