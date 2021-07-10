@@ -76,7 +76,7 @@
 
   &__small {
     font-weight: 300;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
 
   &__big {
@@ -101,7 +101,10 @@
   padding: 1.2rem 3rem;
   border-radius: 100px;
   border: none;
-  margin-right: 2rem;
+  
+  &-right {
+    margin-right: 2rem;
+  }
 
   &-full {
     background-color: #e67e22;
@@ -130,5 +133,119 @@
 
   &:focus {
     outline: none;
+  }
+}
+
+.menu {
+  color: black;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 100%;
+
+ 
+
+  &__heading {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: black;
+  }
+
+  &__content {
+    width: 70%;
+    font-weight: 600;
+    color: rgb(77, 77, 77);
+  }
+
+  &__box {
+    background-color: $color-white;
+    padding: 2rem;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 5rem;
+    }
+    
+  }
+
+  &__price {
+    background-color: #4d2c21;
+    display: inline-block;
+    color: $color-white;
+    padding: .6rem 1.3rem;
+  }
+
+  &__photo {
+    height: 22rem;
+    width: 25rem;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__description {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  &__details {
+    color: rgb(77, 77, 77);
+  }
+}
+
+.center-box {
+  display: flex;
+  margin-top: 5rem;
+}
+
+.heart-icon {
+  position: absolute;
+  top: 25rem;
+  right: 4rem;
+  font-size: 2.5rem;
+
+  &:hover {
+    color: red;
+  }
+}
+
+.btn-center {
+  text-align: center;
+}
+
+.search {
+  margin-top: 4rem;
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: flex-end;
+
+
+  &__input {
+    display: inline-block;
+    padding: 2rem 3rem;
+    border-radius: 100px;
+    border: none;
+    width: 100%;
+    position: relative;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__button {
+    height: 5rem;
+    width: auto;
+    padding: 1rem 2rem;
+    border-radius: 100px;
+    border: none;
+    background-color: rgb(194, 52, 0);
+    color: $color-white;
+    position: absolute;
+    margin-right: .5rem;
+    // display: flex;
+    // justify-content: flex-end;
   }
 }
