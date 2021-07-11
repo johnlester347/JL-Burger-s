@@ -57,6 +57,11 @@
     transform: translate(-50%, -50%);
     text-align: center;
   }
+
+  @media only screen and (max-width: $bp-largest) {
+    position: fixed;
+    z-index: 1;
+  }
 }
 
 .box {
@@ -195,6 +200,11 @@
 
   &:focus {
     outline: none;
+  }
+
+  &:active {
+    transform: scale(.98);
+    box-shadow: 0 .5rem 3rem #e67e22;
   }
 }
 
@@ -385,7 +395,6 @@
   right: 4rem;
   display: none;
   z-index: 5;
-  display: block;
   background-color: crimson;
   border-radius: 100px;
   height: 6rem;
@@ -393,10 +402,19 @@
 
   @media only screen and (max-width: $bp-largest) {
     display: block;
+    top: 5rem;
+    position: fixed;
   }
 }
 
 .menu__icon {
+  height: 5rem;
+  width: 5rem;
+  color: $color-white;
+  margin: 0.3rem 0.5rem;
+}
+
+.close__icon {
   height: 5rem;
   width: 5rem;
   color: $color-white;
@@ -408,10 +426,11 @@
   background-color: #f39c12;
   position: fixed;
   top: 15rem;
-  right: 0;
+  right: -28rem;
   padding: 5rem 8rem;
   z-index: 1;
-
+  display: none;
+  transition: all 10s;
 
   &__list {
     list-style: none;
@@ -421,7 +440,6 @@
 
   &__item {
     
-
     &:not(:last-child) {
       margin-bottom: 5rem;
     }
@@ -430,5 +448,10 @@
       color: $color-white;
       text-decoration: none;
     }
+  }
+
+  @media only screen and (max-width: $bp-largest) {
+    display: none;
+    top: 4rem;
   }
 }

@@ -65,6 +65,10 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; }
+  @media only screen and (max-width: 75em) {
+    .navbar {
+      position: fixed;
+      z-index: 1; } }
 
 .box {
   background-image: linear-gradient(rgba(255, 0, 0, 0.9), rgba(255, 0, 0, 0.9));
@@ -157,6 +161,9 @@ body {
       border: 2px solid #fff; }
   .btn:focus {
     outline: none; }
+  .btn:active {
+    transform: scale(0.98);
+    box-shadow: 0 .5rem 3rem #e67e22; }
 
 .menu {
   color: black;
@@ -293,16 +300,23 @@ body {
   right: 4rem;
   display: none;
   z-index: 5;
-  display: block;
   background-color: crimson;
   border-radius: 100px;
   height: 6rem;
   width: 6rem; }
   @media only screen and (max-width: 75em) {
     .mobile-nav-icon {
-      display: block; } }
+      display: block;
+      top: 5rem;
+      position: fixed; } }
 
 .menu__icon {
+  height: 5rem;
+  width: 5rem;
+  color: #fff;
+  margin: 0.3rem 0.5rem; }
+
+.close__icon {
   height: 5rem;
   width: 5rem;
   color: #fff;
@@ -312,9 +326,11 @@ body {
   background-color: #f39c12;
   position: fixed;
   top: 15rem;
-  right: 0;
+  right: -28rem;
   padding: 5rem 8rem;
-  z-index: 1; }
+  z-index: 1;
+  display: none;
+  transition: all 10s; }
   .sidebar__list {
     list-style: none;
     display: flex;
@@ -324,6 +340,10 @@ body {
   .sidebar__item a {
     color: #fff;
     text-decoration: none; }
+  @media only screen and (max-width: 75em) {
+    .sidebar {
+      display: none;
+      top: 4rem; } }
 
 .header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/b-4.jpg);
