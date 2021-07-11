@@ -6,12 +6,22 @@
   min-height: 100vh;
 
   position: relative;
+  width: 100%;
 }
 
 .content {
   padding: 10rem;
   background-color: #fdfaed;
   width: 100%;
+
+  @media only screen and (max-width: $bp-large) {
+    padding: 7rem 10rem 10rem 10rem;
+  }
+
+  @media only screen and (max-width: $bp-msmall) {
+    padding: 7rem 4rem 10rem 4rem;
+  }
+  
 }
 
 .footer {
@@ -23,6 +33,7 @@
   justify-content: center;
   width: 100%;
   position: relative;
+  text-align: center;
 
   &__logo {
     height: 10rem;
@@ -31,5 +42,9 @@
     border-radius: 100px;
     position: absolute;
     top: -2.5rem;
+  }
+
+  @media only screen and (max-width: $bp-tabport) {
+    padding: 10rem 6rem 10rem 6rem;
   }
 }

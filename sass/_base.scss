@@ -1,7 +1,19 @@
 /**** FONTS ****/
 $color-white: #fff; 
 
+$bp-largest: 75em; // 1200px
+$bp-large: 84.37em; // 1350px
+$bp-medium: 81.25em; // 1300px
+$bp-msmall: 62.5em; // 1000px
+$bp-smallest: 54.12em; // 866px
+$bp-small1: 42.25em;    // 676px
+$bp-small2: 51em;   // 816px
+$bp-small3: 31.25em;  // 500px
+$bp-small4: 25em; // 400px
 
+$bp-tabport: 43.75em; // 700px
+
+$bp-font: 37.5em; // 600px
 
 *,
 *::before,
@@ -15,6 +27,14 @@ $color-white: #fff;
 html {
     box-sizing: border-box;
     font-size: 62.5%; // 1rem 10/16
+
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 50%;
+    }
+
+    @media only screen and (max-width: $bp-font) {
+        font-size: 37.5%;
+    }
 }
 
 

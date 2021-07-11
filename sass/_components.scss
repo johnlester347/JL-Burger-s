@@ -5,6 +5,21 @@
   left: 0;
   width: 100%;
 
+  @media only screen and (max-width: $bp-largest) {
+    top: 4rem;
+  }
+
+  &__item {
+
+    &:hover {
+      color: coral;
+    }
+
+    @media only screen and (max-width: $bp-largest) {
+      display: none;
+    }
+  }
+ 
   &__list {
     display: flex;
     justify-content: space-around;
@@ -17,6 +32,11 @@
       color: inherit;
       display: inline-block;
     }
+
+    @media only screen and (max-width: $bp-largest) {
+      padding: 4rem 0;
+    }
+  
   }
 
   &__logo {
@@ -36,6 +56,11 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+  }
+
+  @media only screen and (max-width: $bp-largest) {
+    position: fixed;
+    z-index: 1;
   }
 }
 
@@ -61,6 +86,7 @@
   top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
+  
 }
 
 .header__textbox {
@@ -69,6 +95,19 @@
   left: 25%;
   transform: translate(-50%, -50%);
   width: 40%;
+
+  @media only screen and (max-width: $bp-largest) {
+    left: 28%;
+  }
+
+  @media only screen and (max-width: 500px) {
+    top: 42%;
+    width: 80%;
+    top: 51%;
+    left: 50%;
+  }
+
+ 
 }
 
 .header {
@@ -90,6 +129,25 @@
     right: 7rem;
     height: 47rem;
     width: auto;
+
+    @media only screen and (max-width: $bp-largest) {
+      right: 18rem;
+      height: 60rem;
+    }
+
+    @media only screen and (max-width: $bp-msmall) {
+      right: 16rem;
+      height: 43rem;
+    }
+
+    @media only screen and (max-width: 900px) {
+      right: 11rem;
+      height: 43rem;
+    }
+
+    @media only screen and (max-width: 700px) {
+      height: 35rem;
+    }
   }
 
   &__paragraph {
@@ -116,6 +174,15 @@
       color: $color-white;
       background-color: #cf6d17;
     }
+
+    @media only screen and (max-width: 900px) {
+      display: block;
+      margin: 2rem 0 2rem 0;
+    }
+
+    @media only screen and (max-width: 500px) {
+      display: inline-block;
+    }
   }
 
   &-ghost {
@@ -133,6 +200,11 @@
 
   &:focus {
     outline: none;
+  }
+
+  &:active {
+    transform: scale(.98);
+    box-shadow: 0 .5rem 3rem #e67e22;
   }
 }
 
@@ -156,6 +228,10 @@
     width: 70%;
     font-weight: 600;
     color: rgb(77, 77, 77);
+
+    @media only screen and (max-width: $bp-small3) {
+      width: 90%;
+    }
   }
 
   &__box {
@@ -165,7 +241,26 @@
 
     &:not(:last-child) {
       margin-right: 5rem;
+
+      @media only screen and (max-width: $bp-large) {
+        margin-right: 2rem;
+      }
     }
+
+    @media only screen and (max-width: $bp-msmall) {
+      width: 46%;
+      margin: 2rem;
+      float: left;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+      width: 77%;
+    }
+
+    @media only screen and (max-width: $bp-small1) {
+      width: 58%;
+    }
+
     
   }
 
@@ -174,6 +269,12 @@
     display: inline-block;
     color: $color-white;
     padding: .6rem 1.3rem;
+
+    @media only screen and (max-width: $bp-smallest) {
+      position: absolute;
+      top: 2rem;
+      left: 2rem;
+    }
   }
 
   &__photo {
@@ -198,6 +299,27 @@
 .center-box {
   display: flex;
   margin-top: 5rem;
+
+  @media only screen and (max-width: $bp-msmall) {
+    display: block;
+    width: 100%;
+  }
+  @media only screen and (max-width: $bp-smallest) {
+    // display: block;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  @media only screen and (max-width: $bp-small4) {
+    width: 100%;
+  }
+
+  @media only screen and (max-width: $bp-small2) {
+    width: 100%;
+  }
 }
 
 .heart-icon {
@@ -208,6 +330,11 @@
 
   &:hover {
     color: red;
+  }
+
+  
+  @media only screen and (max-width: $bp-smallest) {
+    top: 20rem;
   }
 }
 
@@ -247,5 +374,84 @@
     margin-right: .5rem;
     // display: flex;
     // justify-content: flex-end;
+  }
+
+  @media only screen and (max-width: $bp-msmall) {
+    width: 80%;
+  }
+
+  @media only screen and (max-width: $bp-tabport) {
+    width: 90%;
+  }
+
+  @media only screen and (max-width: $bp-small4) {
+    width: 100%;
+  }
+}
+
+.mobile-nav-icon {
+  position: absolute;
+  top: 18rem;
+  right: 4rem;
+  display: none;
+  z-index: 5;
+  background-color: crimson;
+  border-radius: 100px;
+  height: 6rem;
+  width: 6rem;
+
+  @media only screen and (max-width: $bp-largest) {
+    display: block;
+    top: 5rem;
+    position: fixed;
+  }
+}
+
+.menu__icon {
+  height: 5rem;
+  width: 5rem;
+  color: $color-white;
+  margin: 0.3rem 0.5rem;
+}
+
+.close__icon {
+  height: 5rem;
+  width: 5rem;
+  color: $color-white;
+  margin: 0.3rem 0.5rem;
+}
+
+
+.sidebar {
+  background-color: #f39c12;
+  position: fixed;
+  top: 15rem;
+  right: -28rem;
+  padding: 5rem 8rem;
+  z-index: 1;
+  display: none;
+  transition: all 10s;
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    
+    &:not(:last-child) {
+      margin-bottom: 5rem;
+    }
+
+    a{
+      color: $color-white;
+      text-decoration: none;
+    }
+  }
+
+  @media only screen and (max-width: $bp-largest) {
+    display: none;
+    top: 4rem;
   }
 }
