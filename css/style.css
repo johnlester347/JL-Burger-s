@@ -316,6 +316,9 @@ body {
   color: #fff;
   margin: 0.3rem 0.5rem; }
 
+.show {
+  right: 0rem; }
+
 .close__icon {
   height: 5rem;
   width: 5rem;
@@ -326,11 +329,12 @@ body {
   background-color: #f39c12;
   position: fixed;
   top: 15rem;
-  right: -28rem;
+  right: 0;
   padding: 5rem 8rem;
   z-index: 1;
-  display: none;
-  transition: all 10s; }
+  display: block;
+  transform: translateX(100%);
+  transition: all 2s; }
   .sidebar__list {
     list-style: none;
     display: flex;
@@ -342,8 +346,9 @@ body {
     text-decoration: none; }
   @media only screen and (max-width: 75em) {
     .sidebar {
-      display: none;
-      top: 4rem; } }
+      display: block;
+      top: 24rem;
+      border-radius: 13px; } }
 
 .header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/b-4.jpg);
