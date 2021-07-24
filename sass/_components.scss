@@ -414,6 +414,10 @@
   margin: 0.3rem 0.5rem;
 }
 
+.show {
+  right: 0rem;
+}
+
 .close__icon {
   height: 5rem;
   width: 5rem;
@@ -426,11 +430,13 @@
   background-color: #f39c12;
   position: fixed;
   top: 15rem;
-  right: -28rem;
+  right: 0;
   padding: 5rem 8rem;
   z-index: 1;
-  display: none;
-  transition: all 10s;
+  display: block;
+  transform: translateX(100%);
+  transition: all 2s;
+
 
   &__list {
     list-style: none;
@@ -451,7 +457,8 @@
   }
 
   @media only screen and (max-width: $bp-largest) {
-    display: none;
-    top: 4rem;
+    display: block;
+    top: 24rem;
+    border-radius: 13px;
   }
 }
